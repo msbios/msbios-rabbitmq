@@ -5,6 +5,8 @@
  */
 namespace MSBios\RabbitMQ;
 
+use Zend\Stdlib\ArrayUtils;
+
 /**
  * Class Module
  * @package MSBios\RabbitMQ
@@ -28,5 +30,17 @@ class Module extends \MSBios\Module
     protected function getNamespace()
     {
         return __NAMESPACE__;
+    }
+
+    /**
+     * @inheritdoc
+     *
+     * @return array|mixed|\Traversable
+     */
+    public function getConfig()
+    {
+        return ArrayUtils::merge(parent::getConfig(), [
+            ConfigProvider::SERVICE_MANAGER => (new ConfigProvider)->getDependencyConfig()
+        ]);
     }
 }
