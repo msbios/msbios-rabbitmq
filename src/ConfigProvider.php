@@ -6,6 +6,7 @@
 
 namespace MSBios\RabbitMQ;
 
+use MSBios\RabbitMQ\Exception\MethodNotAllowedException;
 use PhpAmqpLib\Connection\AMQPStreamConnection;
 
 /**
@@ -26,4 +27,15 @@ class ConfigProvider extends \MSBios\ConfigProvider
             ]
         ];
     }
+
+    /**
+     * @inheritdoc
+     *
+     * @return array
+     */
+    public function getListenersConfig(): array
+    {
+        throw new MethodNotAllowedException('Method ');
+    }
+
 }
