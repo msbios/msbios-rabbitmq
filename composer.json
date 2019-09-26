@@ -5,7 +5,7 @@
   "keywords": [
     "php"
   ],
-  "homepage": "https://github.com/msbios/msbios",
+  "homepage": "https://github.com/msbios/msbios-rabbitmq",
   "minimum-stability": "stable",
   "authors": [
     {
