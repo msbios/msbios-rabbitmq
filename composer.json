@@ -46,7 +46,8 @@
   },
   "extra": {
     "zf": {
-      "component": "MSBios\\RabbitMQ"
+      "component": "MSBios\\RabbitMQ",
+      "config-provider": "MSBios\\RabbitMQ\\ConfigProvider"
     }
   }
 }

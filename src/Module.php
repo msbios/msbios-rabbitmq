@@ -40,7 +40,7 @@ class Module extends \MSBios\Module
     public function getConfig()
     {
         return ArrayUtils::merge(parent::getConfig(), [
-            ConfigProvider::SERVICE_MANAGER => (new ConfigProvider)->getDependencyConfig()
+            'service_manager' => (new ConfigProvider)->getDependencyConfig()
         ]);
     }
 }
